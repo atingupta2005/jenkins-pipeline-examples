@@ -25,8 +25,7 @@ pipeline {
   stages {
     stage("foo") {
       steps {
-        echo "hello"
-        sh "test -f propertiesOptionsandTriggers.groovy"
+        echo "hello $SOME_STRING"
       }
     }
   }
