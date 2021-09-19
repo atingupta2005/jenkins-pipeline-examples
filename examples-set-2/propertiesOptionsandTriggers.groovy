@@ -26,7 +26,7 @@ pipeline {
     stage("foo") {
       steps {
         echo "hello"
-        sh "test -f Jenkinsfile"
+        sh "test -f propertiesOptionsandTriggers.groovy"
       }
     }
   }
