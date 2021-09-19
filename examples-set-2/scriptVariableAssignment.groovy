@@ -1,26 +1,20 @@
 pipeline {
   agent {
-    // executes on an executor with the label 'some-label' or 'docker'
-    label "some-label || docker"
+    // executes on an executor with the label 'node1' or 'node2'
+    label "node1 || node"
   }
 
   stages {
-    stage("foo") {
+    stage("stage 1") {
       steps {
-        // variable assignment (other than environment variables) can only be done in a script block
-        // complex global variables (with properties or methods) can only be run in a script block
-        // env variables can also be set within a script block
         script {
-          foo = docker.image('ubuntu')
-          env.bar = "${foo.imageName()}"
-          echo "foo: ${foo.imageName()}"
+          env.name = "Atin"
         }
       }
     }
-    stage("bar") {
+    stage("stage 2") {
       steps{
-        echo "bar: ${env.bar}"
-        echo "foo: ${foo.imageName()}"
+        echo "name: ${env.name}"
       }
     }
   }
