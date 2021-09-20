@@ -10,7 +10,7 @@ pipeline {
     stage("Hello") {
       steps {
         echo "Hello"
-        echo $FOO
+        echo "${currentBuild.getNumber()}"
       }
     }
     stage("Evaluate FOO") {
