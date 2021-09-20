@@ -10,6 +10,7 @@ pipeline {
     stage("Hello") {
       steps {
         echo "Hello"
+        echo $FOO
       }
     }
     stage("Evaluate FOO") {
