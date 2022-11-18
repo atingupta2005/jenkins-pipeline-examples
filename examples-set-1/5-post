@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                return 1
+                echo "Atin"
             }
         }
     }
