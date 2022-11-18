@@ -9,7 +9,7 @@ pipeline {
 
             steps {
                 echo "Started stage A"
-                sleep(time: 5, unit: "SECONDS")
+                sleep(time: 2, unit: "SECONDS")
             }
         }
 
